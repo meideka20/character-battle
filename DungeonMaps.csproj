@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{8CE3AD44-D10D-472B-8868-247D9C2CDEE9}</ProjectGuid>
+    <ProjectGuid>{41A4814E-FE06-4993-8A51-DFFE5E14BE90}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>CharacterBattle</RootNamespace>
-    <AssemblyName>CharacterBattle</AssemblyName>
+    <RootNamespace>DungeonMaps</RootNamespace>
+    <AssemblyName>DungeonMaps</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,11 +43,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CommonCharacter.cs" />
+    <Compile Include="Dungeon.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Warrior.cs" />
-    <Compile Include="Wizard.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

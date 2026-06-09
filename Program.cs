@@ -4,107 +4,75 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CharacterBattle
+namespace DungeonMaps
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Random random = new Random();
-            List<CommonCharacter> list = new List<CommonCharacter>(4);
-            int round = 1;
-            int index;
-            int damage;
-            bool toCasualties = false;
+            // Creates a Dungeon object, which contains the code to draw
+            // a map in the console. This map is 50 columns by 20 rows.
+            Dungeon dungeon = new Dungeon("Sample Dungeon", 50, 20);
 
-            Warrior timmy = new Warrior(-4, 100, "Timmy", random, 3);
-            Wizard billy = new Wizard(14, -30, "Billy", random, 3);
-            Warrior bob = new Warrior(-60, 100, "Bob", random, 2);
-            Wizard beep = new Wizard(11, 100, "Beep", random, 5);
+            // ACTIVITY 1: Building the first room ------------------------------------
+            // Top left room
+            dungeon.DrawWallHorizontal(-1, 0, 12); // Draw the top wall
+            dungeon.DrawWallVertical(0, -5, 12); // Draw left wall
+            dungeon.DrawWallHorizontal(1, 7, 10); // Draw the bottom wall
+            dungeon.DrawWallVertical(11, 1, 1); // Draw top right wall
+            dungeon.DrawWallVertical(11, 5, 2); // Draw bottom right wall
+                                                // Wall corners
+            dungeon.DrawObject(0, 0, '╔');
+            dungeon.DrawObject(11, 0, '╗');
+            dungeon.DrawObject(0, 7, '╚');
+            dungeon.DrawObject(11, 7, '╝');
+            dungeon.DrawObject(11, 2, '╚'); // The entrance to the hallway
+            dungeon.DrawObject(11, 4, '╔'); // The entrance to the hallway
+                                            // Objects in the room
+            dungeon.DrawObject(3, 4, '@'); // The explorer character
+            dungeon.DrawObject(7, 6, '['); // Trap door - left half
+            dungeon.DrawObject(8, 6, ']'); // Trap door - right half
+                                           // Attempting to draw off the screen (none of these should appear)
+            dungeon.DrawObject(-5, -12, 'X');
+            dungeon.DrawObject(-7, 6, 'X');
+            dungeon.DrawObject(55, 92, 'X');
+            // Attempting to use a negative length (neither of these should appear)
+            dungeon.DrawWallHorizontal(10, 10, -5);
+            dungeon.DrawWallVertical(10, 10, -200);
 
-            list.Add(timmy);
-            list.Add(billy);
-            list.Add(bob);
-            list.Add(beep);
+            // ACTIVITY 2: Adding more to the dungeon ---------------------------------
+            // Horizontal hallway
+            dungeon.DrawWallHorizontal(12, 2, 24, ConsoleColor.Cyan, '~');
+            dungeon.DrawWallHorizontal(12, 4, 20, ConsoleColor.DarkCyan, '~');
+            // Vertical hallway
+            dungeon.DrawWallVertical(36, 3, 11, ConsoleColor.Cyan, '|');
+            dungeon.DrawWallVertical(32, 5, 9, ConsoleColor.DarkCyan, '|');
+            // Corners
+            dungeon.DrawObject(36, 2, '.', ConsoleColor.Magenta);
+            dungeon.DrawObject(32, 4, '.', ConsoleColor.DarkMagenta);
+            // Second room walls
+            dungeon.DrawWallHorizontal(25, 14, 7, ConsoleColor.DarkGray, '_');
+            dungeon.DrawWallHorizontal(37, 14, 12, ConsoleColor.DarkGray, '_');
+            dungeon.DrawWallHorizontal(25, 19, 50, ConsoleColor.Red, '-');
+            dungeon.DrawWallVertical(24, 15, 1000, ConsoleColor.Gray, '[');
+            dungeon.DrawWallVertical(49, 15, 9000, ConsoleColor.Gray, ']');
+            // Corners
+            dungeon.DrawObject(32, 14, '/', ConsoleColor.Gray);
+            dungeon.DrawObject(36, 14, '\\', ConsoleColor.Gray);
+            dungeon.DrawObject(24, 19, '}', ConsoleColor.Yellow);
+            dungeon.DrawObject(49, 19, '{', ConsoleColor.Yellow);
+            // Objects
+            dungeon.DrawObject(40, 18, '$', ConsoleColor.Green);
+            dungeon.DrawObject(36, 16, '$', ConsoleColor.Green);
+            dungeon.DrawObject(28, 17, '$', ConsoleColor.Green);
 
-            while (list.Count > 1)
-            {
-                Console.WriteLine("Round " + round + "--------------");
-                Console.WriteLine();
 
-                // attack phase
-                for (int i = 0; i < list.Count; i++)
-                {
-                    index = random.Next(0, list.Count);
-                    while(index == i)
-                    {
-                        index = random.Next(0, list.Count);
-                    }
-                    damage = list[i].Attack();
-                    Console.WriteLine(list[i].Name + " attacks " + list[index].Name + " for " + damage + " damage!");
-                    list[index].TakeDamage(damage);
-                }
-
-                Console.WriteLine();
-
-                // report health phase
-                for(int i = 0; i<list.Count; i++)
-                {
-                    Console.WriteLine(list[i].Name + " has " + list[i].Health + " health left.");
-                }
-                
-                // casualties(if any)
-                for(int i = list.Count - 1; i > -1; i--)
-                {
-                    if(list[i].IsDead())
-                    {
-                        toCasualties = true;
-                        break;
-                    }
-                    else if(list[i].ReadyToFlee())
-                    {
-                        toCasualties = true;
-                        break;
-                    }
-                }
-                if(toCasualties)
-                {
-                    Console.WriteLine();
-                    Console.WriteLine(">> Casualties <<");
-                    for(int i = list.Count - 1; i >= 0; i--)
-                    {
-                        if(list[i].IsDead())
-                        {
-                            Console.WriteLine(list[i].Name + " has died.");
-                            list.RemoveAt(i);
-                        }
-                        else if(list[i].ReadyToFlee())
-                        {
-                            Console.WriteLine(list[i].Name + " has fled the battle.");
-                            list.RemoveAt(i);
-                        }
-                    }
-                    toCasualties = false;
-                }
-
-                Console.WriteLine();
-                round++;
-                if (list.Count > 1)
-                {
-                    Console.WriteLine("Press any key to continue to the next round");
-                    Console.ReadKey();
-                }
-            }
-            Console.WriteLine();
-            Console.WriteLine("** Battle Finished **");
-            if (list.Count > 0)
-            {
-                Console.WriteLine(list[0].Name + " is the winner!");
-            }
-            else
-            {
-                Console.WriteLine("The victor was death");
-            }
+            // WRAP UP ----------------------------------------------------------------
+            // The following lines ensure the cursor ends up near the bottom
+            // of the console window when the program ends.
+            Console.CursorTop = Console.WindowHeight - 1;
+            Console.CursorLeft = 0;
+            // Keep the window open
             Console.ReadKey();
         }
     }

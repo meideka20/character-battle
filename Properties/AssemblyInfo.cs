@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("CharacterBattle")]
+[assembly: AssemblyTitle("DungeonMaps")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("CharacterBattle")]
+[assembly: AssemblyProduct("DungeonMaps")]
 [assembly: AssemblyCopyright("Copyright ©  2020")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("8ce3ad44-d10d-472b-8868-247d9c2cdee9")]
+[assembly: Guid("41a4814e-fe06-4993-8a51-dffe5e14be90")]
 
 // Version information for an assembly consists of the following four values:
 //
