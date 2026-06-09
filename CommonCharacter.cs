@@ -36,20 +36,44 @@ namespace CharacterBattle
         public CommonCharacter(int strength, int health, string name, Random random)
         {
             this.random = random;
-            this.strength = strength;
-            this.health = health;
-            this.name = name;
+            if (strength < 0)
+            {
+                this.strength = 10;
+            }
+            else
+            {
+                this.strength = strength;
+            }
+            if (health < 0)
+            { 
+                this.health = 100;
+            }
+            else
+            {
+                this.health = health;
+            }
+            if (name == "")
+            {
+                this.name = "Billy";
+            }
+            else
+            {
+                this.name = name;
+            }
         }
 
         public virtual int Attack()
         {
-            // TODO implement attack logic
-            return 0;
+            return random.Next(0, strength);
         }
 
         public virtual void TakeDamage(int amount)
         {
             health -= amount;
+            if(health < 0)
+            {
+                health = 0;
+            }
         }
 
         public virtual bool ReadyToFlee()

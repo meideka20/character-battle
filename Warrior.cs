@@ -32,20 +32,25 @@ namespace CharacterBattle
 
         public override bool ReadyToFlee()
         {
-            // TODO cancel all fleeing actions
             return false;
         }
 
         public override int Attack()
         {
-            // TODO Attack
-            return 0;
+            return (random.Next(0, strength+1) + bonusDamage);
         }
 
         // will always take damage minus the armor rating
         public override void TakeDamage(int amount)
         {
-            // TODO Take Damage
+            if (amount - armor > 0)
+            {
+                health -= amount - armor;
+                if (health < 0)
+                {
+                    health = 0;
+                }
+            }
         }
 
         public override string ToString()
