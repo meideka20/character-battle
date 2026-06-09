@@ -32,12 +32,14 @@ namespace CharacterBattle
 
         public override bool ReadyToFlee()
         {
+            // TODO cancel all fleeing actions
             return false;
         }
 
         public override int Attack()
         {
-            return (random.Next(0, strength+1) + bonusDamage);
+            // Roll random damage then add the bonus damage modifier to it
+            return 0;
         }
 
         // will always take damage minus the armor rating

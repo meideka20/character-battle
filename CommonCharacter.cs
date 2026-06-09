@@ -36,30 +36,9 @@ namespace CharacterBattle
         public CommonCharacter(int strength, int health, string name, Random random)
         {
             this.random = random;
-            if (strength < 0)
-            {
-                this.strength = 10;
-            }
-            else
-            {
-                this.strength = strength;
-            }
-            if (health < 0)
-            { 
-                this.health = 100;
-            }
-            else
-            {
-                this.health = health;
-            }
-            if (name == "")
-            {
-                this.name = "Billy";
-            }
-            else
-            {
-                this.name = name;
-            }
+            this.strength = strength;
+            this.health = health;
+            this.name = name;
         }
 
         public virtual int Attack()
@@ -70,14 +49,11 @@ namespace CharacterBattle
         public virtual void TakeDamage(int amount)
         {
             health -= amount;
-            if(health < 0)
-            {
-                health = 0;
-            }
         }
 
         public virtual bool ReadyToFlee()
         {
+            // TODO if the hero's health goes below a certain number, return true
             if(health >=50)
             {
                 return false;

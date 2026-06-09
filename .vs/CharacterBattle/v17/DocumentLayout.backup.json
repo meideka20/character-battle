@@ -7,7 +7,15 @@
       "RelativeMoniker": "D:0:0:{8CE3AD44-D10D-472B-8868-247D9C2CDEE9}|CharacterBattle.csproj|solutionrelative:commoncharacter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8CE3AD44-D10D-472B-8868-247D9C2CDEE9}|CharacterBattle.csproj|e:\\freshman year\\github semester repository fall 2020\\homework\\characterbattle\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8CE3AD44-D10D-472B-8868-247D9C2CDEE9}|CharacterBattle.csproj|e:\\freshman year\\github semester repository fall 2020\\homework\\characterbattle\\wizard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8CE3AD44-D10D-472B-8868-247D9C2CDEE9}|CharacterBattle.csproj|solutionrelative:wizard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8CE3AD44-D10D-472B-8868-247D9C2CDEE9}|CharacterBattle.csproj|e:\\freshman year\\github semester repository fall 2020\\homework\\characterbattle\\warrior.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8CE3AD44-D10D-472B-8868-247D9C2CDEE9}|CharacterBattle.csproj|solutionrelative:warrior.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8CE3AD44-D10D-472B-8868-247D9C2CDEE9}|CharacterBattle.csproj|E:\\Freshman Year\\GitHub Semester Repository Fall 2020\\Homework\\CharacterBattle\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8CE3AD44-D10D-472B-8868-247D9C2CDEE9}|CharacterBattle.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -18,8 +26,34 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Wizard.cs",
+              "DocumentMoniker": "E:\\Freshman Year\\GitHub Semester Repository Fall 2020\\Homework\\CharacterBattle\\Wizard.cs",
+              "RelativeDocumentMoniker": "Wizard.cs",
+              "ToolTip": "E:\\Freshman Year\\GitHub Semester Repository Fall 2020\\Homework\\CharacterBattle\\Wizard.cs",
+              "RelativeToolTip": "Wizard.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-09T17:58:01.341Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Warrior.cs",
+              "DocumentMoniker": "E:\\Freshman Year\\GitHub Semester Repository Fall 2020\\Homework\\CharacterBattle\\Warrior.cs",
+              "RelativeDocumentMoniker": "Warrior.cs",
+              "ToolTip": "E:\\Freshman Year\\GitHub Semester Repository Fall 2020\\Homework\\CharacterBattle\\Warrior.cs",
+              "RelativeToolTip": "Warrior.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-09T17:58:00.127Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -28,20 +62,20 @@
               "RelativeDocumentMoniker": "CommonCharacter.cs",
               "ToolTip": "E:\\Freshman Year\\GitHub Semester Repository Fall 2020\\Homework\\CharacterBattle\\CommonCharacter.cs",
               "RelativeToolTip": "CommonCharacter.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-06-06T19:31:19.769Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Program.cs",
               "DocumentMoniker": "E:\\Freshman Year\\GitHub Semester Repository Fall 2020\\Homework\\CharacterBattle\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "E:\\Freshman Year\\GitHub Semester Repository Fall 2020\\Homework\\CharacterBattle\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-06-06T19:27:58.674Z",
               "EditorCaption": ""
