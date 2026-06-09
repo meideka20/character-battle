@@ -43,7 +43,8 @@ namespace CharacterBattle
 
         public virtual int Attack()
         {
-            return random.Next(0, strength);
+            // TODO implement attack logic
+            return 0;
         }
 
         public virtual void TakeDamage(int amount)

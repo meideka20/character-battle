@@ -38,7 +38,7 @@ namespace CharacterBattle
 
         public override int Attack()
         {
-            // Roll random damage then add the bonus damage modifier to it
+            // TODO Attack
             return 0;
         }
 
