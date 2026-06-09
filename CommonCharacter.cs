@@ -44,7 +44,7 @@ namespace CharacterBattle
         public virtual int Attack()
         {
             // TODO implement attack logic
-            return 0;
+            return strength + strength;
         }
 
         public virtual void TakeDamage(int amount)
@@ -54,7 +54,6 @@ namespace CharacterBattle
 
         public virtual bool ReadyToFlee()
         {
-            // TODO if the hero's health goes below a certain number, return true
             if(health >=50)
             {
                 return false;

@@ -45,14 +45,7 @@ namespace CharacterBattle
         // will always take damage minus the armor rating
         public override void TakeDamage(int amount)
         {
-            if (amount - armor > 0)
-            {
-                health -= amount - armor;
-                if (health < 0)
-                {
-                    health = 0;
-                }
-            }
+            // TODO Take Damage
         }
 
         public override string ToString()
