@@ -17,9 +17,9 @@ namespace CharacterBattle
             int damage;
             bool toCasualties = false;
 
-            Warrior timmy = new Warrior(17, 100, "Timmy", random, 3);
-            Wizard billy = new Wizard(14, 100, "Billy", random, 3);
-            Warrior bob = new Warrior(19, 100, "Bob", random, 2);
+            Warrior timmy = new Warrior(-4, 100, "Timmy", random, 3);
+            Wizard billy = new Wizard(14, -30, "Billy", random, 3);
+            Warrior bob = new Warrior(-60, 100, "Bob", random, 2);
             Wizard beep = new Wizard(11, 100, "Beep", random, 5);
 
             list.Add(timmy);

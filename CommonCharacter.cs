@@ -44,7 +44,7 @@ namespace CharacterBattle
         public virtual int Attack()
         {
             // TODO implement attack logic
-            return strength + strength;
+            return 0;
         }
 
         public virtual void TakeDamage(int amount)
